@@ -28,3 +28,5 @@ uname - Unix Name
     - Exemplu: uname -o
 
 2. List all running processes
+   ps -a
+de ce ps -e ? 
