@@ -12,22 +12,8 @@ uname - Unix Name
     - Exemplu: uname
   - uname -a: Afișează toate informațiile disponibile despre sistem într-o ordine specifică (Nume kernel, Hostname, Versiune release, Arhitectură)
     - Exemplu: uname -a
-  - uname -s: Afișează numele kernelului (ex: Linux)
-    - Exemplu: uname -s
   - uname -n: Afișează numele de rețea al mașinii (hostname)
-    - Exemplu: uname -n
-  - uname -r: Afișează versiunea de release a kernelului (esențial pentru compatibilitatea driverelor)
     - Exemplu: uname -r
-  - uname -v: Afișează versiunea detaliată de kernel și data la care a fost compilat
-    - Exemplu: uname -v
-  - uname -m: Afișează arhitectura hardware a mașinii (ex: x86_64)
-    - Exemplu: uname -m
-  - uname -p: Afișează tipul procesorului (adesea "unknown" în unele distribuții)
-    - Exemplu: uname -p
-  - uname -i: Afișează platforma hardware (adesea "unknown")
-    - Exemplu: uname -i
-  - uname -o: Afișează numele sistemului de operare (ex: GNU/Linux)
-    - Exemplu: uname -o
 
 2. List all running processes
    ps -aux
@@ -43,19 +29,6 @@ ps - Process Status
     - Exemplu: ps -ef
   - ps aux: (Stil BSD) Cel mai folosit mod; afișează procesele tuturor utilizatorilor (a), inclusiv cele fără terminal (x), cu detalii despre consumul de resurse (u)
     - Exemplu: ps aux
-  - ps -u username: Afișează procesele care aparțin unui anumit utilizator
-    - Exemplu: ps -u root
-  - ps -p PID: Afișează informații despre un proces specific, identificat prin ID-ul său
-    - Exemplu: ps -p 1234
-  - ps -C command: Filtrează procesele după numele executabilului
-    - Exemplu: ps -C nginx
-  - ps --forest: Afișează ierarhia proceselor sub formă de arbore (vizualizează relația părinte-copil)
-    - Exemplu: ps -ef --forest
-  - ps -eo pcpu,pmem,comm: Afișează doar coloane personalizate (ex: %CPU, %Memorie, Nume Comandă)
-    - Exemplu: ps -eo pid,ppid,cmd --sort=-pcpu
-      - --sort=: Specifică ordinea în care vor fi afișate rândurile (sortarea).
-         -pcpu: Acesta este detaliul cheie: pcpu înseamnă procentul de utilizare CPU (%CPU).
-      Obs. Semnul minus (-) din față indică o sortare descrescătoare; Dacă era +pcpu sau doar pcpu, sortarea era crescătoare.
 
 3. Show disk usage
    df -h
@@ -70,36 +43,6 @@ df - Disk Free
     - Exemplu: df
   - df -h: (Human-readable) Transformă dimensiunile în formate lizibile (K, M, G)
     - Exemplu: df -h
-  - df -T: (Type) Afișează și tipul sistemului de fișiere (ex: ext4, xfs, vfat, tmpfs)
-    - Exemplu: df -T
-  - df -t [tip]: Filtrează lista pentru a afișa doar un anumit tip de sistem de fișiere
-    - Exemplu: df -t ext4
-  - df -i: (Inodes) Afișează informații despre inoduri în loc de spațiu (critic dacă ai mii de fișiere mici)
-    - Exemplu: df -i
-  - df . : Afișează informații doar pentru sistemul de fișiere pe care se află directorul curent
-    - Exemplu: df -h .
-  - df -a: (All) Include și sistemele de fișiere "dummy" sau cele cu dimensiune 0 (ex: /proc, /sys)
-    - Exemplu: df -a
-
-du - Disk Usage
-      - masoara suma dimensiunilor fisierelor individuale gasite
-      - raporteaza marimea datelor
-  - du: Afișează dimensiunea fiecărui fișier și subdirector din locația curentă (în blocuri)
-    - Exemplu: du
-  - du -h: (Human-readable) Afișează dimensiunile în formate ușor de citit (K, M, G)
-    - Exemplu: du -h
-  - du -s: (Summary) Afișează doar totalul pentru argumentul specificat, fără a lista fiecare subdirector
-    - Exemplu: du -s
-  - du -sh: Combinația cea mai utilizată; oferă un total lizibil al directorului
-    - Exemplu: du -sh .
-  - du -sh *: Afișează dimensiunea totală pentru fiecare fișier și folder din directorul curent, individual
-    - Exemplu: du -sh *
-  - du -a: (All) Include și fișierele individuale în listare, nu doar directoarele
-    - Exemplu: du -ah
-  - du -c: (Grand total) Adaugă o linie la final cu suma totală a tuturor elementelor listate
-    - Exemplu: du -shc folder1 folder2
-  - du --max-depth=1: Limitează afișarea la un anumit nivel de adâncime (foarte util pentru organizare)
-    - Exemplu: du -h --max-depth=1 /var
 
 6. Show system uptime
    uptime
@@ -107,14 +50,6 @@ du - Disk Usage
 uptime - System Run Time
   - uptime: Afișează o singură linie care conține ora curentă, timpul de când sistemul rulează, numărul de utilizatori logați și media de încărcare (load average)
     - Exemplu: uptime
-  - uptime -p: (Pretty) Afișează timpul de funcționare într-un format mult mai lizibil (doar ore, minute, zile)
-    - Exemplu: uptime -p
-  - uptime -s: (Since) Afișează data și ora exactă la care sistemul a pornit (boot time)
-    - Exemplu: uptime -s
-  - uptime -h: (Help) Afișează un scurt meniu de ajutor cu opțiunile disponibile
-    - Exemplu: uptime -h
-  - uptime -V: (Version) Afișează versiunea utilitarului uptime
-    - Exemplu: uptime -V
 
 7. Display current logged-in user
    whoami
@@ -130,14 +65,6 @@ head - Output First Part of Files
     - Exemplu: head -n 20 data.txt
   - head -[număr]: O formă scurtă (obsoletă în unele sisteme, dar funcțională în Bash) pentru a specifica liniile
     - Exemplu: head -5 data.txt
-  - head -c [bytes]: Afișează primii octeți (bytes) specificați din fișier
-    - Exemplu: head -c 100 data.txt
-  - head -v: (Verbose) Afișează întotdeauna header-ul cu numele fișierului (util când citești mai multe fișiere)
-    - Exemplu: head -v config.conf
-  - head -q: (Quiet) Nu afișează header-ul cu numele fișierelor (implicit când e un singur fișier)
-    - Exemplu: head -q file1.txt file2.txt
-  - head -n -[număr]: Afișează tot conținutul fișierului CU EXCEPȚIA ultimelor N linii
-    - Exemplu: head -n -5 data.txt (arată tot, mai puțin ultimele 5 linii)
 
 13. Show the last 10 lines of a file
    tail data.txt
@@ -150,18 +77,20 @@ tail - Output Last Part of Files
     - Exemplu: tail -n 20 data.txt
   - tail -[număr]: Formă scurtă pentru afișarea ultimelor N linii
     - Exemplu: tail -5 data.txt
-  - tail -f: (Follow) Monitorizează fișierul în timp real; afișează liniile noi pe măsură ce sunt adăugate
-    - Exemplu: tail -f /var/log/syslog
-  - tail -F: (Follow + Retry) Similar cu -f, dar continuă să încerce citirea dacă fișierul este șters sau redenumit (util pentru log-uri care fac "rotate")
-    - Exemplu: tail -F /var/log/apache2/error.log
-  - tail -n +[număr]: Afișează tot conținutul ÎNCEPÂND cu linia specificată până la final
-    - Exemplu: tail -n +11 data.txt (sare peste primele 10 linii)
-  - tail -c [bytes]: Afișează ultimii octeți (bytes) specificați
-    - Exemplu: tail -c 100 data.txt
 
 19. Display the total size of the current working directory
    du -sh .
    du -sh 
+du - Disk Usage
+  - du: Afișează dimensiunea fiecărui fișier și subdirector din locația curentă (în blocuri)
+    - Exemplu: du
+  - du -h: (Human-readable) Afișează dimensiunile în formate ușor de citit (K, M, G)
+    - Exemplu: du -h
+  - du -s: (Summary) Afișează doar totalul pentru argumentul specificat, fără a lista fiecare subdirector
+    - Exemplu: du -s
+  - du -sh: Combinația cea mai utilizată; oferă un total lizibil al directorului
+    - Exemplu: du -sh .
+  - du -sh *: Afișează dimensiunea totală pentru fiecare fișier și folder din directorul curent, individual
 
 24. Display all currently logged-in users
    w
@@ -172,17 +101,8 @@ who / w / whoami - User Tracking
     - Exemplu: whoami
   - who: Afișează o listă simplă cu utilizatorii logați, terminalul folosit și data/ora logării
     - Exemplu: who
-  - who -H: (Heading) Adaugă capul de tabel pentru coloane (foarte util pentru claritate)
-    - Exemplu: who -H
-  - who -b: (Boot) Afișează data și ora ultimei porniri a sistemului (similar cu uptime -s)
-    - Exemplu: who -b
-  - who -a: (All) Afișează toate informațiile disponibile (inclusiv procesele sistemului)
-    - Exemplu: who -a
   - w: Versiunea "pro" a lui who; afișează cine e logat ȘI ce comandă rulează în acest moment
     - Exemplu: w
-  - w -s: (Short) Versiunea scurtă; omite timpul de logare și CPU-ul, arătând doar userul și procesul curent
-    - Exemplu: w -s
-
 
 25. Show current user's UID, GID and group memberships
    id
@@ -190,16 +110,6 @@ who / w / whoami - User Tracking
 id - Identity
   - id: Afișează UID-ul (User ID), GID-ul (Group ID) și toate grupurile din care face parte utilizatorul curent
     - Exemplu: id
-  - id -u: (User) Afișează doar ID-ul numeric al utilizatorului
-    - Exemplu: id -u
-  - id -un: (User Name) Afișează numele de utilizator (echivalent cu whoami)
-    - Exemplu: id -un
-  - id -g: (Group) Afișează doar ID-ul numeric al grupului principal (primary GID)
-    - Exemplu: id -g
-  - id -gn: (Group Name) Afișează numele grupului principal
-    - Exemplu: id -gn
-  - id -G: (Groups) Afișează toate ID-urile grupurilor din care face parte (inclusiv cele secundare)
-    - Exemplu: id -G
   - id [username]: Afișează informațiile de identitate pentru un alt utilizator specificat
     - Exemplu: id root
 
