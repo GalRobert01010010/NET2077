@@ -13,7 +13,7 @@ uname - Unix Name
   - uname -a: Afișează toate informațiile disponibile despre sistem într-o ordine specifică (Nume kernel, Hostname, Versiune release, Arhitectură)
     - Exemplu: uname -a
   - uname -n: Afișează numele de rețea al mașinii (hostname)
-    - Exemplu: uname -r
+    - Exemplu: uname -n
 
 2. List all running processes
    ps -aux
