@@ -10,6 +10,8 @@
 uname - Unix Name
   - uname: Afișează informații despre sistem; fără opțiuni, afișează doar numele kernelului (Linux)
     - Exemplu: uname
+  - uname -r: Afișează versiunea de release a kernelului (esențial pentru compatibilitatea driverelor)
+    - Exemplu: uname -r
   - uname -a: Afișează toate informațiile disponibile despre sistem într-o ordine specifică (Nume kernel, Hostname, Versiune release, Arhitectură)
     - Exemplu: uname -a
   - uname -n: Afișează numele de rețea al mașinii (hostname)
