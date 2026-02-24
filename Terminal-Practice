@@ -2,7 +2,8 @@
 
 # Easy (30 questions)
 
-1. Display kernel version 
+1. Display kernel version.
+   Show the current kernel version and system information.
    uname -r
    uname -a
    cat /proc/version
@@ -17,7 +18,8 @@ uname - Unix Name
   - uname -n: Afișează numele de rețea al mașinii (hostname)
     - Exemplu: uname -n
 
-2. List all running processes
+2. List all running processes.
+   Display all currently running processes on the system.
    ps -aux
    ps -ef
    ps -A
@@ -32,7 +34,8 @@ ps - Process Status
   - ps aux: (Stil BSD) Cel mai folosit mod; afișează procesele tuturor utilizatorilor (a), inclusiv cele fără terminal (x), cu detalii despre consumul de resurse (u)
     - Exemplu: ps aux
 
-3. Show disk usage
+3. Show disk usage.
+   Display disk space usage for all mounted filesystems.
    df -h
    df
    df -H
@@ -46,14 +49,16 @@ df - Disk Free
   - df -h: (Human-readable) Transformă dimensiunile în formate lizibile (K, M, G)
     - Exemplu: df -h
 
-6. Show system uptime
+6. Show system uptime.
+   Display how long the system has been running.
    uptime
 
 uptime - System Run Time
   - uptime: Afișează o singură linie care conține ora curentă, timpul de când sistemul rulează, numărul de utilizatori logați și media de încărcare (load average)
     - Exemplu: uptime
 
-7. Display current logged-in user
+7. Display current logged-in user.
+   Show the username of the currently logged-in user.
    whoami
 
 12. Show first 10 lines of a file
@@ -105,6 +110,8 @@ who / w / whoami - User Tracking
     - Exemplu: who
   - w: Versiunea "pro" a lui who; afișează cine e logat ȘI ce comandă rulează în acest moment
     - Exemplu: w
+logname - LoginInformation
+   - logname: Afiseaza numele celui care s-a logat, indiferent de utilizatorul sub care ruleaza
 
 25. Show current user's UID, GID and group memberships
    id
