@@ -73,7 +73,8 @@ head - Output First Part of Files
   - head -[număr]: O formă scurtă (obsoletă în unele sisteme, dar funcțională în Bash) pentru a specifica liniile
     - Exemplu: head -5 data.txt
 
-13. Show the last 10 lines of a file
+13. Show the last 10 lines of a file.
+   Display the last 10 lines of log.txt
    tail data.txt
    tail -10 data.txt
 
@@ -122,7 +123,20 @@ id - Identity
   - id [username]: Afișează informațiile de identitate pentru un alt utilizator specificat
     - Exemplu: id root
 
+27. Count lines in file.
+   Count the number of lines in data.txt
+   wc -l file.txt
 
+wc - Word Count
+  - l: 
+
+
+29. Remove duplicate files.
+   Determine the type of file 'mystery'.
+   uniq mistery
+
+uniq - Unique
+   - 
 
 
 
